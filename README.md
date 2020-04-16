@@ -59,3 +59,9 @@ Things you may want to cover:
 - belongs_to :group
 - belongs_to :user
 
+## postsテーブル
+
+|Column|Type|Options|
+|------|----|-------|
+|user-id|integer|null: false, foreign_key: true|
+|id|integer|null: false|
