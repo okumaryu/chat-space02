@@ -15,7 +15,6 @@
       &__name{
         font-size: 16px;
         color:#ffffff
-        // line-height: center;
       }
       &__icon{
         width: 60px;
@@ -34,7 +33,6 @@
      background-color: #2f3e51;
      height: calc(100% - 100px);
     &__group-block{
-      // background-color: yellowgreen;
       height: 91px;
       margin: auto 20px;
       padding: 20px 0 40px;
@@ -44,21 +42,16 @@
         color:#ffffff;
         li.group__content__name{
           list-style: none;
-          // background-color: tomato;
-          // color:#ffffff;
           font-size: 15px;
           font-weight: bold;
           margin-bottom:5px ;
         }
         li.group__content__message{
           list-style: none;
-          // background-color: green;
-          // color:#ffffff;
           font-size: 11px;
           font-weight: bold;
         }
       }
-      
     }
   }
 }
