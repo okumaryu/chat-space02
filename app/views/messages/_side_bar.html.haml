@@ -1,0 +1,27 @@
+.side-bar
+  .side-bar__user-name
+    .side-bar__user-name__top-items
+      .side-bar__user-name__top-items__name 
+        ryuta
+      .side-bar__user-name__top-items__icon
+        .side-bar__user-name__top-items__icon__edit-user
+          = link_to "#", class: "content__btn" do
+            = icon('fas','edit')
+        .side-bar__user-name__top-items__icon__new-group
+          = link_to "#", class: "content__btn" do
+            = icon('fas','cog')
+            
+  .side-bar__group-list
+    .side-bar__group-list__group-block
+      = link_to "#", class: "group__content" do
+        %li.group__content__name
+          野球部
+        %li.group__content__message
+          こんにちは
+    .side-bar__group-list__group-block
+      = link_to "#", class: "group__content" do
+        %li.group__content__name
+          サッカー部
+        %li.group__content__message
+          よろしく      
+
