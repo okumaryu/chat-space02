@@ -5,23 +5,37 @@
         = current_user.name
       .side-bar__user-name__top-items__icon
         .side-bar__user-name__top-items__icon__edit-user
-          = link_to "#", class: "content__btn" do
+          = link_to new_group_path, class: "content__btn" do
             = icon('fas','edit')
         .side-bar__user-name__top-items__icon__new-group
           = link_to edit_user_path(current_user), class: "content__btn" do
             = icon('fas','cog')
             
-  .side-bar__group-list
-    .side-bar__group-list__group-block
-      = link_to "#", class: "group__content" do
-        %li.group__content__name
-          野球部
-        %li.group__content__message
-          こんにちは
-    .side-bar__group-list__group-block
-      = link_to "#", class: "group__content" do
-        %li.group__content__name
-          サッカー部
-        %li.group__content__message
-          よろしく      
+  .side-bar__groups-list
+    - current_user.groups.each do |g|
+      .side-bar__groups-list__group-block
+        = link_to "#", class: "group__content" do
+          %li.group__content__name
+            = g.name
+          %li.group__content__message
+            メッセージはまだありません
 
+-# -# メンターさんからのご説明
+-# current_userはヘルパーメソッド（Userモデルの情報を持ってきてる）
+-# hamlで-、htmlで<%%>で始まる時は、コントローラーの情報を持ってくる
+-# eachの前のgroupsはモデル名。本来は「group」。「groups」になってる理由は、
+-# current_usersが関連する Userモデル内にある、アソシエーションでuser has many 「groups」となっているため、
+-# このgroupsが当てられている。
+
+-# 簡単な説明
+-# current_user.groups={[id,name][id,name][id,name]}
+
+-# current_user.groups[0] = [id,name]
+-# current_user.groups[1] = [id,name]
+-# current_user.groups[2] = [id,name]
+
+-# each //順番に取り出して　取り出した内容を　変数ｆに代入し　do 以下に当てはめる
+
+-# ①f = [id,name]
+-# ②f = [id,name]
+-# ③f = [id,name]
