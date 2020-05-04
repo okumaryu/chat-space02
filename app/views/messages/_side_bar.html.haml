@@ -14,11 +14,12 @@
   .side-bar__groups-list
     - current_user.groups.each do |g|
       .side-bar__groups-list__group-block
-        = link_to "#", class: "group__content" do
+        = link_to group_messages_path(g), class: "group__content" do
           %li.group__content__name
             = g.name
           %li.group__content__message
-            メッセージはまだありません
+            = g.show_last_message
+
 
 -# -# メンターさんからのご説明
 -# current_userはヘルパーメソッド（Userモデルの情報を持ってきてる）
