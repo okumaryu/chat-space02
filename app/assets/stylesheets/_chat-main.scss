@@ -37,6 +37,7 @@
     }
 
   }
+
   &__message-list{
     height: calc(100% - 100px - 90px);
     background-color: #fafafa;
@@ -64,52 +65,62 @@
       }
     }
   }
+
   &__message-form{
     height: 90px;
-    // width: 100%;
+    width: 100%;
     background-color: #d2d2d2;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    &__message-box{
-      height: 50px;
-      align-items: center;
-      padding: 0 10px;
-      margin-left: 40px;
+    .new_message{
       display: flex;
       justify-content: space-between;
-      position: relative;
-      &__message{
-        .input-text {
-        // background-color: khaki;
-        padding-left:10px;
-        background-color: white;
-        width: calc(100vw - 510px);
+      &__box{
         height: 50px;
+        align-items: center;
+        padding: 0 10px;
+        margin-left: 40px;
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        &__message{
+          .input-text {
+            // background-color: khaki;
+            padding-left:10px;
+            background-color: white;
+            width: calc(100vw - 510px);
+            height: 50px;
+          }
         }
-      }
-      &__icon{
-        position: absolute;
-        right: 10px;
-        .input-box__image{
-          padding-right: 10px;
-          .file-btn{
-            display: none;
+        &__icon{
+          position: absolute;
+          right: 10px;
+          .input-box__image{
+            padding-right: 10px;
+            i{
+              cursor: pointer;
+            }
+            .file-btn{
+              display: none;
+            }
           }
         }
       }
-    }
-    .input-Submit{
-      background-color: skyblue;
-      height: 50px;
-      width: 100px;
-      align-items: center;
-      text-align: center;
-      margin-right: 40px;
-      color: white;
-      text-decoration: none;
-      cursor: pointer;
+      .input-Submit{
+        background-color: skyblue;
+        height: 50px;
+        width: 100px;
+        align-items: center;
+        text-align: center;
+        margin-right: 40px;
+        color: white;
+        text-decoration: none;
+        cursor: pointer;
+      }
     }
   }
 }
+  
+  
 
