@@ -35,7 +35,6 @@
         }
       }
     }
-
   }
 
   &__message-list{
@@ -45,7 +44,6 @@
     overflow: scroll;
     &__box{
       margin:0 40px 46px;
-      // width: calc(100vw - 300px);
       word-wrap: break-word;
       &__small{
         display: flex;
@@ -92,7 +90,6 @@
         position: relative;
         &__message{
           .input-text {
-            // background-color: khaki;
             padding-left:10px;
             background-color: white;
             width: calc(100vw - 510px);
@@ -127,6 +124,3 @@
     }
   }
 }
-  
-  
-
